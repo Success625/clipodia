@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+
+  main {
+    @apply relative w-full min-h-screen h-full bg-gray-700 text-slate-100 pt-16;
+  }
+}
+
+@layer utilities {
+  .cards {
+    @apply relative container mt-4 p-4 mx-auto columns-1 sm:columns-2 md:columns-3 space-x-4 space-y-4;
+  }
+
+  .card {
+    @apply relative bg-slate-800 p-4 rounded-md;
+  }
+
+  .card-p {
+    @apply break-inside-avoid break-words;
+  }
+
+  .add-new {
+    @apply fixed right-4 bottom-4 shadow-lg z-[48];
+  }
+
+  .add-new-btn {
+    @apply bg-slate-800 px-4 py-2 rounded-sm hover:bg-slate-700 transition;
+  }
+
+  .add-new-form {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 bg-slate-800 z-50 scale-0 transition min-w-96 w-96 rounded-md;
+  }
+
+  .add-new-form.active {
+    @apply scale-100;
+  }
+
+  .add-new-form-input {
+    @apply text-base p-2 mb-3 w-full h-10 bg-slate-700 rounded-md outline-none focus:ring-2 overflow-hidden;
+  }
+
+  .add-new-form-submit {
+    @apply block w-full px-4 py-2 bg-slate-900 rounded-md shadow-md mt-3;
+  }
+
+  .overlay {
+    @apply fixed top-0 left-0 w-full h-full z-[49] scale-0 bg-slate-900/50;
+  }
+
+  .add-new-form.active ~ .overlay {
+    @apply scale-100 transition;
+  }
+
+  .no-content {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 text-slate-400 text-xl select-none;
+  }
+}
