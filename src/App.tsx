@@ -6,7 +6,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
+        <Route path="/clipodia" element={<MainLayout />}>
           <Route index element={<Home />} />
         </Route>
       </Routes>
