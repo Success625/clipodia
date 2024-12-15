@@ -13,8 +13,6 @@ const Home = () => {
     const db = await openDatabase("clipodia", "clipcontents");
     const clipContentsArr = await getDataWithExpiry(db, "clipcontents");
     setClipContents(clipContentsArr);
-
-    console.log(clipContentsArr);
   };
 
   useEffect(() => {
