@@ -5,14 +5,14 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 w-full p-2 bg-gray-900 text-slate-100 flex justify-between z-50">
       <Link to="/clipodia">
         {/* <img
-          src={`${process.env.PUBLIC_URL}/logo.png`}
+          src={`/logo.png`}
           width={48}
           height={48}
           alt="logo"
           className="rounded-full inline-block mr-2"
         /> */}
         <img
-          src={`logo.png`}
+          src={`${import.meta.env.BASE_URL}/logo.png`}
           width={48}
           height={48}
           alt="logo"
