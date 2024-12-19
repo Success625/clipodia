@@ -4,9 +4,9 @@ import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/clipodia">
       <Routes>
-        <Route path="/clipodia" element={<MainLayout />}>
+        <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
         </Route>
       </Routes>
